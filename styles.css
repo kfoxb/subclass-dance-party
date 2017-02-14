@@ -56,9 +56,6 @@ body, a:link, a:visited, a:active{
   30% {
     transform: rotate(-45deg);
   }
-  100% {
-    font-size: 12px;
-  }
 }
 .rotate{
  /* transition: transform 0.5s;

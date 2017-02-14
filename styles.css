@@ -25,3 +25,22 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+.batman{
+  height: 80px;
+  width: 80px;
+  position: absolute;
+}
+.sidetoside{
+/*  right: 50px;
+  position: relative;*/
+  transform: scale(2);
+}
+.joker {
+  /*height: 160px;*/
+  width: 160px;
+  position: absolute;
+}
+.rotate{
+  transition: transform 3s;
+  transform: rotate(1080deg);
+} 

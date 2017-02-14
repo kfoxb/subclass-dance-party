@@ -25,7 +25,7 @@ $(document).ready(function() {
     var dancer = new dancerMakerFunction(
       $('body').height() * Math.random(),
       $('body').width() * Math.random(),
-      Math.random() * 500
+      400
     );
     window.dancers.push(dancer);
     $('body').append(dancer.$node);
@@ -58,8 +58,42 @@ $(document).ready(function() {
     }
   });
 
-  $('body').on('mouseover', '.batman', function() {
-    alert('mouseover');
+  $('body').on('mouseenter', '.joker', function() {
+    $(this).hide();
+    //debugger;
+    //var oldJoker = $(this);
+    //console.log($(this));
+    var joker = $(this)[0];
+
+    var topString = joker.style.top;
+    var top = Number(topString.substring(0, topString.length - 2));
+
+    var leftString = joker.style.left;
+    var left = Number(leftString.substring(0, leftString.length - 2));
+
+    // debugger;
+    var batman = new MakeBatmanDancer(top, left, 400);
+    console.log(batman.$node[0]);
+    window.dancers.push(batman);
+    $('body').append(batman.$node);
+  });
+
+
+  $('body').on('mouseenter', '.sidetoside', function() {
+    $(this).hide();
+    console.log(this);
+    var batman = $(this)[0];
+
+    var topString = batman.style.top;
+    var top = Number(topString.substring(0, topString.length - 2));
+
+    var leftString = batman.style.left;
+    var left = Number(leftString.substring(0, leftString.length - 2));
+
+    var joker = new MakeJokerDancer(top, left, 400);
+    //console.log(joker.$node[0]);
+    window.dancers.push(joker);
+    $('body').append(joker.$node);
   });
 });
 

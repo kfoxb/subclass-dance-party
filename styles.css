@@ -3,9 +3,9 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  /*background-color:#444;*/
   font-size: 18px;
-  /*background: url('img/danceFloor.jpg') no-repeat center center fixed;*/
+  background: url('img/background.png') no-repeat center center fixed;*/
   /*background-repeat: no-repeat;*/
 }
 body, a:link, a:visited, a:active{
@@ -41,14 +41,28 @@ body, a:link, a:visited, a:active{
 .sidetoside{
 /*  right: 50px;
   position: relative;*/
-  transform: scale(2);
+  transform: scale(2) translate(100px,0);
+  /*transform: translate(20px,0);*/
 }
 .joker {
   /*height: 160px;*/
   width: 160px;
   position: absolute;
 }
+@keyframes jokerdance{
+  0% {
+    transform: rotate(45deg);
+  }
+  30% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    font-size: 12px;
+  }
+}
 .rotate{
-  transition: transform 3s;
-  transform: rotate(1080deg);
+ /* transition: transform 0.5s;
+  transform: rotate(45deg);*/
+  animation: jokerdance 0.5s infinite;
+}
 } 

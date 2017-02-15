@@ -62,4 +62,11 @@ body, a:link, a:visited, a:active{
   transform: rotate(45deg);*/
   animation: jokerdance 0.5s infinite;
 }
+.testMove{
+/*  right: 50px;
+  position: relative;*/
+  transform: translate(100px,100px);
+  transition-duration: 5s;
+  /*transform: translate(20px,0);*/
+}
 } 
